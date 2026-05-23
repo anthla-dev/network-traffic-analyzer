@@ -1,38 +1,42 @@
-# tshark-network-analysis
+# Network Traffic Analyzer
 
-Packet-level network traffic analysis and inspection toolkit built using **tshark (Wireshark CLI)** for protocol debugging, traffic parsing, and security-focused network inspection.
+Packet-level network traffic analysis tool built using **tshark (Wireshark CLI)** for protocol inspection, traffic parsing, and security-focused network debugging.
+
+This project explores how low-level packet inspection can be used to understand, debug, and analyze real network behavior.
 
 ---
 
 ## Overview
 
-This repository extends practical usage of `tshark` for analyzing raw network traffic at the packet level. It focuses on extracting structured insights from packet captures (PCAP files) and live traffic for debugging and security analysis.
+The Network Traffic Analyzer processes packet capture (PCAP) files and live network traffic to extract structured insights from raw packets.
 
-The goal of this project is to explore how low-level packet inspection can be used for:
-- Network debugging
-- Traffic characterization
-- Security and anomaly detection
-- Protocol analysis (TCP/IP behavior)
+It focuses on:
+- Protocol-level traffic inspection (TCP, UDP, ICMP, HTTP)
+- Network flow reconstruction
+- Traffic filtering and analysis
+- Security-oriented packet pattern detection
 
 ---
 
 ## Features
 
-- Packet capture parsing using tshark CLI
-- Protocol-level filtering (TCP, UDP, ICMP, HTTP, etc.)
-- Extraction of key packet metadata:
-  - Source / destination IPs
+- PCAP file parsing using tshark CLI
+- Live network traffic capture support
+- Protocol filtering (TCP / UDP / ICMP / HTTP)
+- Packet metadata extraction:
+  - Source IP
+  - Destination IP
   - Ports
-  - Protocol types
-  - Packet timestamps
-- Traffic flow reconstruction from PCAP files
-- Support for filtering suspicious or anomalous traffic patterns
-- Command-line based workflow for reproducible analysis
+  - Protocol type
+  - Timestamps
+- Traffic flow analysis
+- Filtering for suspicious or anomalous traffic patterns
+- Reproducible CLI-based workflow
 
 ---
 
 ## Example Usage
 
-### 1. List available interfaces
+### List available interfaces
 ```bash
 tshark -D
